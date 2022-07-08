@@ -29,7 +29,7 @@ local select_target = function(opts)
       actions.select_default:replace(function()
         actions.close(prompt_bufnr)
         local selection = action_state.get_selected_entry()
-        vim.g.cmake_build_target = selection[1]
+        vim.g.CMakeBuildTarget = selection[1]
       end)
       return true
     end,
@@ -54,7 +54,7 @@ local select_build_type = function(opts)
       actions.select_default:replace(function()
         actions.close(prompt_bufnr)
         local selection = action_state.get_selected_entry()
-        vim.g.cmake_build_type = selection[1]
+        vim.g.CMakeBuildType = selection[1]
       end)
       return true
     end,
@@ -79,7 +79,7 @@ local select_kit = function(opts)
       actions.select_default:replace(function()
         actions.close(prompt_bufnr)
         local selection = action_state.get_selected_entry()
-        vim.g.cmake_selected_kit = selection[1]
+        vim.g.CMakeSelectedKit = selection[1]
       end)
       return true
     end,
